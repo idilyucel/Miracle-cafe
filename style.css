@@ -527,38 +527,6 @@ button {
     color: var(--clr-text-light);
 }
 
-/* İstatistik kutuları (Flexbox ile yan yana) */
-.about__stats {
-    display: flex;
-    gap: 2rem;
-    margin-top: 2rem;
-    flex-wrap: wrap;
-}
-
-.about__stat-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem 1.5rem;
-    background: var(--clr-white);
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-sm);
-    flex: 1;
-    min-width: 100px;
-}
-
-.about__stat-number {
-    font-size: 1.6rem;
-    font-weight: var(--fw-bold);
-    color: var(--clr-primary);
-}
-
-.about__stat-label {
-    font-size: var(--fs-small);
-    color: var(--clr-text-light);
-}
-
-
 /* ================================================================
    8. MENÜ BÖLÜMÜ (FİLTRELEMELİ ÜRÜN LİSTESİ)
    ================================================================
@@ -1147,10 +1115,6 @@ body.dark-mode .contact__quick-box {
     background: var(--clr-bg-alt);
 }
 
-body.dark-mode .about__stat-item {
-    background: var(--clr-bg-alt);
-}
-
 body.dark-mode .menu__item {
     background: var(--clr-white);
 }
@@ -1309,14 +1273,6 @@ body.dark-mode .hero__title--highlight {
         grid-template-columns: 1fr;
     }
 
-    .about__stats {
-        gap: 1rem;
-    }
-
-    .about__stat-item {
-        min-width: 80px;
-        padding: 0.75rem 1rem;
-    }
 }
 
 /* ----- TABLET (769px - 1024px) ----- */
