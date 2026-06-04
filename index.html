@@ -1,50 +1,73 @@
 ﻿<!DOCTYPE html>
+<!-- ============================================================
+     Miracle Coffee & Shop — Ana Sayfa
+     ============================================================
+     Bu sayfa, "Miracle Coffee & Shop" adlı butik kafenin
+     kurumsal web sitesidir. Tek sayfadan (single page) oluşur.
+     ============================================================ -->
 <html lang="tr">
 
 <head>
     <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Mobil cihazlarda doğru görüntüleme için viewport ayarı -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <title data-i18n="meta.title">Miracle Coffee &amp; Shop | Kütahya'da Kalite ve Lezzetin Buluşma Noktası</title>
+    <!-- Sayfa Başlığı (SEO için önemli: 50-60 karakter) -->
+    <title data-i18n="meta.title">Miracle Coffee &amp; Shop | Kütahya'da Kalite ve Lezzetin Buluşma Noktası</title>
 
-        <meta name="description"
+    <!-- Meta Açıklama (SEO: arama sonuçlarında görünür) -->
+    <meta name="description"
         content="Miracle Coffee & Shop, botanik konseptli, serpme kahvaltı, özel kahve çeşitleri ve el yapımı tatlılar sunan huzurlu bir kafedir." />
 
-        <meta name="keywords"
-        content="Miracle Coffee, kahve, botanik kafe, serpme kahvaltı, latte art, red velvet pasta, İstanbul kafe" />
+    <!-- Sayfa anahtar kelimeleri -->
+    <meta name="keywords" content="Miracle Coffee, kahve, botanik kafe, serpme kahvaltı, latte art, red velvet pasta" />
 
-        <meta property="og:locale" content="tr_TR" />
-        <meta property="og:title" content="Miracle Coffee & Shop – Kütahya'da Kalite ve Lezzetin Buluşma Noktası" />
+    <!-- Sayfanın Türkçe olduğunu belirtir -->
+    <meta property="og:locale" content="tr_TR" />
+    <!-- Sosyal medyada paylaşılınca çıkacak başlık -->
+    <meta property="og:title" content="Miracle Coffee & Shop – Kütahya'da Kalite ve Lezzetin Buluşma Noktası" />
     <meta property="og:description"
         content="Serpme kahvaltı, özel kahveler ve eşsiz tatlılar ile dolu botanik bir kafe deneyimi." />
     <meta property="og:type" content="website" />
 
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-        <link rel="stylesheet" href="style.css" />
+    <!-- Ana Stil Dosyamız -->
+    <link rel="stylesheet" href="style.css" />
 
-        <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style"
+    <!-- Font Awesome 6 (non-blocking) -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style"
         onload="this.onload=null;this.rel='stylesheet'" />
     <noscript>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     </noscript>
 
-        <link rel="preload" href="images/mekandışı1.webp" as="image" />
+    <!-- Hero görselini önceden yükle -->
+    <link rel="preload" href="images/mekandışı1.webp" as="image" />
 </head>
 
 <body>
 
-        <header class="header" id="header">
+    <!-- ============================================================
+         <header> — SABİT (STICKY) NAVİGASYON ÇUBUĞU
+         ============================================================
+         Sayfa aşağı kaydırıldığında üste yapışır.
+         İçinde: logo, nav linkleri, dark mode butonu, hamburger.
+         ============================================================ -->
+    <header class="header" id="header">
         <nav class="nav container" aria-label="Ana navigasyon" data-i18n-aria-label="nav.aria">
-                        <a href="#" class="nav__logo" aria-label="Ana sayfaya git" data-i18n-aria-label="nav.logo.aria">
+            <!-- Logo: Sol üst köşe -->
+            <a href="#" class="nav__logo" aria-label="Ana sayfaya git" data-i18n-aria-label="nav.logo.aria">
                 <img src="images/logo.webp" width="789" height="787" alt="Miracle Coffee &amp; Shop logosu"
                     class="nav__logo-image" data-i18n-alt="nav.logo.alt" />
                 Miracle Coffee & Shop
             </a>
 
-                        <ul class="nav__list" id="nav-list" role="menubar">
+            <!-- Navigasyon bağlantıları (orta kısım, geniş ekranlarda görünür) -->
+            <ul class="nav__list" id="nav-list" role="menubar">
                 <li role="none"><a href="#hero" class="nav__link" role="menuitem" data-i18n="nav.home">Anasayfa</a></li>
                 <li role="none"><a href="#about" class="nav__link" role="menuitem" data-i18n="nav.about">Hakkımızda</a>
                 </li>
@@ -55,14 +78,18 @@
                         data-i18n="nav.contact">İletişim</a></li>
             </ul>
 
-                        <div class="nav__actions">
-                                <button class="nav__lang-btn" id="lang-toggle" aria-label="Dil değiştir"
+            <!-- Sağ taraftaki aksiyon butonları -->
+            <div class="nav__actions">
+                <!-- Dil değiştirme butonu -->
+                <button class="nav__lang-btn" id="lang-toggle" aria-label="Dil değiştir"
                     data-i18n-aria-label="nav.lang.aria">EN</button>
-                                <button class="nav__theme-btn" id="theme-toggle" aria-label="Karanlık modu aç/kapat"
+                <!-- Karanlık Mod geçiş butonu (JS ile kontrol edilir) -->
+                <button class="nav__theme-btn" id="theme-toggle" aria-label="Karanlık modu aç/kapat"
                     data-i18n-aria-label="nav.theme.aria">
                     <i class="fas fa-moon" id="theme-icon" aria-hidden="true"></i>
                 </button>
-                                <button class="nav__hamburger" id="hamburger-btn" aria-label="Menüyü aç/kapat" aria-expanded="false"
+                <!-- Hamburger menü ikonu (yalnızca mobilde görünür) -->
+                <button class="nav__hamburger" id="hamburger-btn" aria-label="Menüyü aç/kapat" aria-expanded="false"
                     data-i18n-aria-label="nav.menu.aria">
                     <span class="nav__hamburger-line"></span>
                     <span class="nav__hamburger-line"></span>
@@ -72,42 +99,61 @@
         </nav>
     </header>
 
-        <main>
-        <!-- Hero -->
+    <!-- ============================================================
+         <main> — İÇERİĞİN ANA GÖVDESİ
+         ============================================================ -->
+    <main>
+        <!-- ============================================================
+             SECTION #1: HERO (KARŞILAMA ALANI)
+             ============================================================
+             Tam ekran, arka planda yeşil botanik temalı gradient.
+             "Doğanın İçinde Mucizevi Bir Mola" başlığı ve CTA butonu.
+             ============================================================ -->
         <section class="hero" id="hero">
             <div class="hero__overlay"></div>
             <div class="hero__content container">
-                                <i class="fas fa-leaf hero__icon" aria-hidden="true"></i>
+                <!-- Dekoratif yaprak ikonu -->
+                <i class="fas fa-leaf hero__icon" aria-hidden="true"></i>
                 <h1 class="hero__title">
-                    <span data-i18n="hero.title.part1">Kütahya'da</span>
+                    <span data-i18n="hero.title.part1">Doğanın İçinde</span>
                     <br />
-                    <span class="hero__title--highlight" data-i18n="hero.title.part2">Kalite ve Lezzetin Buluşma Noktası</span>
+                    <span class="hero__title--highlight" data-i18n="hero.title.part2">Mucizevi Bir Mola</span>
                 </h1>
                 <p class="hero__subtitle" data-i18n="hero.subtitle">
                     Serpme kahvaltıdan özel kahvelere, el yapımı tatlılardan
                     sıcak sohbetlere…
                 </p>
-                                <a href="#menu" class="btn btn--primary">
+                <!-- CTA (Call-to-Action) butonu: Menü bölümüne yönlendirir -->
+                <a href="#menu" class="btn btn--primary">
                     <i class="fas fa-utensils" aria-hidden="true"></i>
                     <span data-i18n="hero.cta">Menüyü İncele</span>
                 </a>
             </div>
-                        <a href="#about" class="hero__scroll" aria-label="Aşağı kaydır" data-i18n-aria-label="hero.scroll.aria">
+            <!-- Sayfayı aşağı kaydırmayı teşvik eden küçük ok -->
+            <a href="#about" class="hero__scroll" aria-label="Aşağı kaydır" data-i18n-aria-label="hero.scroll.aria">
                 <i class="fas fa-chevron-down" aria-hidden="true"></i>
             </a>
         </section>
 
-        <!-- About -->
+        <!-- ============================================================
+             SECTION #2: ABOUT (HAKKIMIZDA)
+             ============================================================
+             Kafenin hikayesini ve konseptini anlatan, görsel eşliğinde
+             samimi bir bölüm.
+             ============================================================ -->
         <section class="about section" id="about">
             <div class="about__container container">
-                                <div class="about__image-wrapper">
+                <!-- Görsel alanı -->
+                <div class="about__image-wrapper">
                     <img src="images/mekan-ici2.webp" width="1200" height="1600"
-                        alt="Miracle Coffee & Shop botanik duvarlı, ahşap mobilyalı rahat oturma alanı"
+                        alt="Miracle Coffee & Shop şık ve modern, ahşap mobilyalı rahat oturma alanı"
                         class="about__image" loading="lazy" />
-                                        <div class="about__image-frame" aria-hidden="true"></div>
+                    <!-- Dekoratif çerçeve efekti -->
+                    <div class="about__image-frame" aria-hidden="true"></div>
                 </div>
 
-                                <article class="about__content">
+                <!-- Metin alanı -->
+                <article class="about__content">
                     <h2 class="section__title" data-i18n="about.title">Hakkımızda</h2>
                     <h3 class="about__subtitle" data-i18n="about.subtitle">Her fincanda bir hikaye, her köşede bir
                         yeşillik</h3>
@@ -129,7 +175,12 @@
             </div>
         </section>
 
-        <!-- Menu -->
+        <!-- ============================================================
+             SECTION #3: MENÜ (FİLTRELEMELİ ÜRÜN LİSTESİ)
+             ============================================================
+             Kullanıcı kategori butonuna tıklayınca JS ile filtreleme
+             yapılır. Her ürün <article> içinde, adı sol, arası noktalı çizgi (dotted line) ile ayrılır.
+             ============================================================ -->
         <section class="menu section" id="menu">
             <div class="container">
                 <div class="section__header">
@@ -423,7 +474,12 @@
             </div>
         </section>
 
-        <!-- Gallery -->
+        <!-- ============================================================
+             SECTION #4: GALLERY (GALERİ)
+             ============================================================
+             CSS Grid ile mozaik görünüm. Hover efekti ile görseller
+             hafifçe büyür. lazy loading ile performans artışı.
+             ============================================================ -->
         <section class="gallery section" id="gallery">
             <div class="container">
                 <div class="section__header">
@@ -433,9 +489,11 @@
                     </p>
                 </div>
 
-                                <div class="gallery__grid">
-                                        <figure class="gallery__item">
-                        <img src="images/cokertmekebabı.webp" width="1200" height="1600" alt="Nefis Çökertme Kebabı"
+                <!-- Galeri grid: her görsel hover'da scale() ile büyür -->
+                <div class="gallery__grid">
+                    <!-- Her bir galeri öğesi -->
+                    <figure class="gallery__item">
+                        <img src="images/mekan-içi1.webp" width="1200" height="1600" alt="Çökertme Kebabı sunumu"
                             loading="lazy" />
                         <figcaption class="gallery__caption" data-i18n="gallery.caption.1">Çökertme Kebabı</figcaption>
                     </figure>
@@ -455,9 +513,9 @@
                         <figcaption class="gallery__caption" data-i18n="gallery.caption.4">Red Velvet</figcaption>
                     </figure>
                     <figure class="gallery__item">
-                        <img src="images/tarcınlılezzet.webp" width="1200" height="1600" alt="Nefis Tarçınlı Pasta"
+                        <img src="images/tarcınlılezzet.webp" width="1200" height="1600" alt="Tarçınlı Lezzet"
                             loading="lazy" />
-                        <figcaption class="gallery__caption" data-i18n="gallery.caption.5">Nefis Tarçınlı Pasta</figcaption>
+                        <figcaption class="gallery__caption" data-i18n="gallery.caption.5">Tarçınlı Lezzet</figcaption>
                     </figure>
                     <figure class="gallery__item">
                         <img src="images/sogukicecekler.webp" width="1200" height="1600"
@@ -468,7 +526,12 @@
             </div>
         </section>
 
-        <!-- Organizasyon -->
+        <!-- ============================================================
+             SECTION #5: ORGANİZASYONLAR & ETKİNLİKLER
+             ============================================================
+             3 kart (CSS Grid): Doğum Günü, Kurumsal, Özel Davetler.
+             Alt kısımda CTA butonu → #contact yumuşak kaydırma.
+             ============================================================ -->
         <section class="org section" id="organizasyon">
             <div class="container">
                 <div class="section__header">
@@ -479,7 +542,8 @@
                     </p>
                 </div>
 
-                                <div class="org__grid">
+                <!-- 3 kart: CSS Grid ile yan yana (mobilde alt alta) -->
+                <div class="org__grid">
 
                     <!-- Kart 1: Doğum Günü & Kutlamalar -->
                     <article class="org__card">
@@ -514,9 +578,9 @@
                             </div>
                             <h3 class="org__card-title" data-i18n="org.card2.title">Kurumsal Toplantılar</h3>
                             <p class="org__card-desc" data-i18n="org.card2.desc">
-                                Sakin ve şık atmosferimizde işinize odaklanın. Ekip
-                                görüşmeleriniz için hazırladığımız rahat çalışma
-                                alanlarımız ve taze kahve ikramlarımızla hizmetinizdeyiz.
+                                Sakin ve şık atmosferimizde işinize odaklanın.
+                                Projeksiyon, ses sistemi ve kahve ikramıyla
+                                donatılmış toplantı odalarımız hizmetinize hazır.
                             </p>
                         </div>
                     </article>
@@ -543,7 +607,8 @@
 
                 </div>
 
-                                <div class="org__cta-wrapper">
+                <!-- CTA Butonu: İletişim bölümüne yumuşak kaydırma -->
+                <div class="org__cta-wrapper">
                     <a href="#contact" class="btn btn--primary org__cta-btn">
                         <i class="fas fa-calendar-check" aria-hidden="true"></i>
                         <span data-i18n="org.cta">Bilgi ve Rezervasyon İçin İletişime Geçin</span>
@@ -599,7 +664,7 @@
                             <i class="fab fa-instagram contact__icon" aria-hidden="true"></i>
                             <div>
                                 <strong data-i18n="contact.instagram">Instagram</strong>
-                                <p><a href="https://www.instagram.com/miraclecoffeeshop/" target="_blank"
+                                <p><a href="https://instagram.com/miraclecoffeeshop" target="_blank"
                                         rel="noopener noreferrer">@miraclecoffeeshop</a></p>
                             </div>
                         </div>
@@ -621,13 +686,17 @@
                     <form class="contact__form" action="https://api.web3forms.com/submit" method="POST"
                         id="contact-form">
 
-                                                <input type="hidden" name="access_key" value="a5b5478d-2808-459a-9386-8933cd246d5c" />
+                        <!-- WEB3FORMS ACCESS KEY (gizli input, değiştirmeyin) -->
+                        <input type="hidden" name="access_key" value="a5b5478d-2808-459a-9386-8933cd246d5c" />
 
-                                                <input type="checkbox" name="botcheck" class="contact__honeypot" tabindex="-1" />
+                        <!-- Honeypot (spam koruması): botlar doldurur, insan görmez -->
+                        <input type="checkbox" name="botcheck" class="contact__honeypot" tabindex="-1" />
 
-                                                <h3 class="contact__heading" data-i18n="contact.heading">Bize Ulaşın</h3>
+                        <!-- Form başlığı -->
+                        <h3 class="contact__heading" data-i18n="contact.heading">Bize Ulaşın</h3>
 
-                                                <div class="contact__field">
+                        <!-- Ad Soyad -->
+                        <div class="contact__field">
                             <label for="form-name" class="contact__label" data-i18n="contact.form.name">Adınız
                                 Soyadınız</label>
                             <input type="text" id="form-name" name="name" class="contact__input"
@@ -635,7 +704,8 @@
                                 data-i18n-placeholder="contact.form.name" />
                         </div>
 
-                                                <div class="contact__field">
+                        <!-- E-posta (zorunlu) -->
+                        <div class="contact__field">
                             <label for="form-email" class="contact__label" data-i18n="contact.form.email">E-posta
                                 Adresiniz <span aria-hidden="true">*</span></label>
                             <input type="email" id="form-email" name="email" class="contact__input"
@@ -677,19 +747,22 @@
                         -->
                         <div id="rezervasyonAlanlari" class="contact__reservation-fields">
 
-                                                        <div class="contact__field">
+                            <!-- Tarih seçimi -->
+                            <div class="contact__field">
                                 <label for="form-date" class="contact__label"
                                     data-i18n="contact.form.reservation.date">Rezervasyon Tarihi</label>
                                 <input type="date" id="form-date" name="rezervasyon-tarih" class="contact__input" />
                             </div>
 
-                                                        <div class="contact__field">
+                            <!-- Saat seçimi -->
+                            <div class="contact__field">
                                 <label for="form-time" class="contact__label"
                                     data-i18n="contact.form.reservation.time">Rezervasyon Saati</label>
                                 <input type="time" id="form-time" name="rezervasyon-saat" class="contact__input" />
                             </div>
 
-                                                        <div class="contact__field">
+                            <!-- Kişi sayısı -->
+                            <div class="contact__field">
                                 <label for="form-guests" class="contact__label"
                                     data-i18n="contact.form.reservation.guests">Kişi Sayısı</label>
                                 <input type="number" id="form-guests" name="rezervasyon-kisi" class="contact__input"
@@ -699,7 +772,8 @@
 
                         </div>
 
-                                                <div class="contact__field">
+                        <!-- Mesaj alanı (textarea) -->
+                        <div class="contact__field">
                             <label for="form-message" class="contact__label"
                                 data-i18n="contact.form.message">Mesajınız</label>
                             <textarea id="form-message" name="message" class="contact__input contact__textarea" rows="5"
@@ -707,19 +781,23 @@
                                 data-i18n-placeholder="contact.form.message"></textarea>
                         </div>
 
-                                                <button type="submit" class="btn btn--primary contact__submit">
+                        <!-- Gönder butonu -->
+                        <button type="submit" class="btn btn--primary contact__submit">
                             <i class="fas fa-paper-plane" aria-hidden="true"></i>
                             <span data-i18n="contact.form.submit">Gönder</span>
                         </button>
 
-                                                <div id="form-status" class="contact__status" role="alert" aria-live="polite"></div>
+                        <!-- Form durum mesajı (başarı / hata): JS tarafından doldurulur -->
+                        <div id="form-status" class="contact__status" role="alert" aria-live="polite"></div>
                     </form>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
+    <!-- ============================================================
+         <footer> — SAYFA ALANI (COPYRIGHT)
+         ============================================================ -->
     <footer class="footer">
         <div class="container footer__container">
             <p class="footer__copy">
