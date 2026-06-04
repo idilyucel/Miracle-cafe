@@ -1190,6 +1190,36 @@ body.dark-mode .footer {
     background: #0A0A0A;
 }
 
+body.dark-mode .gallery__caption {
+    color: #FAFAFA;
+}
+
+body.dark-mode .btn--primary {
+    color: #FFFFFF;
+}
+
+body.dark-mode .contact__form {
+    border: 1px solid #2a2a2a;
+}
+
+body.dark-mode .contact__social-link {
+    background: #2a2a2a;
+    color: var(--clr-text-light);
+}
+
+body.dark-mode .contact__social-link:hover {
+    background: var(--clr-primary);
+    color: #FFFFFF;
+}
+
+body.dark-mode .nav__hamburger {
+    background: #2a2a2a;
+}
+
+body.dark-mode .nav__hamburger-line {
+    background: var(--clr-text);
+}
+
 body.dark-mode .hero__title--highlight {
     background: linear-gradient(to right, #6EE7B0, #4ADE80);
     -webkit-background-clip: text;
