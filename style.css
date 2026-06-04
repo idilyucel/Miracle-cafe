@@ -531,7 +531,7 @@ button {
    8. MENÜ BÖLÜMÜ (FİLTRELEMELİ ÜRÜN LİSTESİ)
    ================================================================
    Kategori sekmeleri (tabs) + CSS Grid ürün listesi.
-   Ürün adı ↔ fiyat arası noktalı çizgi (dotted line) flex ile.
+   Sadece ürün adı listesi (isim + data-i18n).
    ================================================================ */
 
 /* ----- Kategori sekmeleri (Flexbox ile yan yana) ----- */
@@ -592,49 +592,10 @@ button {
     box-shadow: var(--shadow-md);
 }
 
-/*
-   Ürün adı + noktalı çizgi + fiyat:
-   Flexbox ile ad sol, boşluk + noktalar ortada, fiyat sağda.
-   Noktalı çizgi için bir span (menu__item-dots) kullanıyoruz;
-   bu span flex-grow ile tüm boşluğu kaplar, border-bottom: dotted
-   ile klasik kafe menüsü görünümü verir.
-*/
-.menu__item-row {
-    display: flex;
-    align-items: baseline;
-    gap: 0;
-}
-
 .menu__item-name {
-    flex-shrink: 0;                  /* Ad küçülmesin */
     font-weight: var(--fw-semibold);
     font-size: 1.05rem;
     color: var(--clr-text);
-}
-
-/* Noktalı çizgi alanı: flex ile büyür, border-bottom ile çizgi */
-.menu__item-dots {
-    flex: 1;                         /* Kalan tüm boşluğu kapla */
-    min-width: 16px;
-    margin: 0 0.6rem;
-    border-bottom: 2px dotted var(--clr-primary-light);
-    align-self: flex-end;
-    margin-bottom: 0.25em;
-}
-
-.menu__item-price {
-    flex-shrink: 0;                  /* Fiyat küçülmesin */
-    font-weight: var(--fw-bold);
-    font-size: 1.05rem;
-    color: var(--clr-primary-dark);
-}
-
-/* Ürün açıklaması */
-.menu__item-desc {
-    font-size: var(--fs-small);
-    color: var(--clr-text-light);
-    margin-top: 0.35rem;
-    line-height: 1.5;
 }
 
 
