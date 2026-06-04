@@ -56,31 +56,36 @@
         <nav class="nav container" aria-label="Ana navigasyon" data-i18n-aria-label="nav.aria">
             <!-- Logo: Sol üst köşe -->
             <a href="#" class="nav__logo" aria-label="Ana sayfaya git" data-i18n-aria-label="nav.logo.aria">
-                <img src="images/logo.webp"
-                    alt="Miracle Coffee &amp; Shop logosu"
-                    class="nav__logo-image" data-i18n-alt="nav.logo.alt" />
+                <img src="images/logo.webp" alt="Miracle Coffee &amp; Shop logosu" class="nav__logo-image"
+                    data-i18n-alt="nav.logo.alt" />
                 Miracle Coffee & Shop
             </a>
 
             <!-- Navigasyon bağlantıları (masaüstünde yatay, mobilde hamburger altında) -->
             <ul class="nav__list" id="nav-list" role="menubar">
                 <li role="none"><a href="#hero" class="nav__link" role="menuitem" data-i18n="nav.home">Anasayfa</a></li>
-                <li role="none"><a href="#about" class="nav__link" role="menuitem" data-i18n="nav.about">Hakkımızda</a></li>
+                <li role="none"><a href="#about" class="nav__link" role="menuitem" data-i18n="nav.about">Hakkımızda</a>
+                </li>
                 <li role="none"><a href="#menu" class="nav__link" role="menuitem" data-i18n="nav.menu">Menü</a></li>
-                <li role="none"><a href="#gallery" class="nav__link" role="menuitem" data-i18n="nav.gallery">Galeri</a></li>
-                <li role="none"><a href="#contact" class="nav__link" role="menuitem" data-i18n="nav.contact">İletişim</a></li>
+                <li role="none"><a href="#gallery" class="nav__link" role="menuitem" data-i18n="nav.gallery">Galeri</a>
+                </li>
+                <li role="none"><a href="#contact" class="nav__link" role="menuitem"
+                        data-i18n="nav.contact">İletişim</a></li>
             </ul>
 
             <!-- Sağ taraftaki aksiyon butonları -->
             <div class="nav__actions">
                 <!-- Dil değiştirme butonu -->
-                <button class="nav__lang-btn" id="lang-toggle" aria-label="Dil değiştir" data-i18n-aria-label="nav.lang.aria">EN</button>
+                <button class="nav__lang-btn" id="lang-toggle" aria-label="Dil değiştir"
+                    data-i18n-aria-label="nav.lang.aria">EN</button>
                 <!-- Karanlık Mod geçiş butonu (JS ile kontrol edilir) -->
-                <button class="nav__theme-btn" id="theme-toggle" aria-label="Karanlık modu aç/kapat" data-i18n-aria-label="nav.theme.aria">
+                <button class="nav__theme-btn" id="theme-toggle" aria-label="Karanlık modu aç/kapat"
+                    data-i18n-aria-label="nav.theme.aria">
                     <i class="fas fa-moon" id="theme-icon" aria-hidden="true"></i>
                 </button>
                 <!-- Hamburger menü ikonu (yalnızca mobilde görünür) -->
-                <button class="nav__hamburger" id="hamburger-btn" aria-label="Menüyü aç/kapat" aria-expanded="false" data-i18n-aria-label="nav.menu.aria">
+                <button class="nav__hamburger" id="hamburger-btn" aria-label="Menüyü aç/kapat" aria-expanded="false"
+                    data-i18n-aria-label="nav.menu.aria">
                     <span class="nav__hamburger-line"></span>
                     <span class="nav__hamburger-line"></span>
                     <span class="nav__hamburger-line"></span>
@@ -145,7 +150,8 @@
                 <!-- Metin alanı -->
                 <article class="about__content">
                     <h2 class="section__title" data-i18n="about.title">Hakkımızda</h2>
-                    <h3 class="about__subtitle" data-i18n="about.subtitle">Her fincanda bir hikaye, her köşede bir yeşillik</h3>
+                    <h3 class="about__subtitle" data-i18n="about.subtitle">Her fincanda bir hikaye, her köşede bir
+                        yeşillik</h3>
                     <p class="about__text" data-i18n="about.text1">
                         Miracle Coffee &amp; Miracle Coffee & Shop olarak, Kütahya'nın en nezih mahallelerinden birinde
                         misafirlerimize şık, modern ve sıcak bir atmosfer sunuyoruz. Özenle tasarlanmış iç mekanımız,
@@ -163,7 +169,8 @@
                     <div class="about__stats">
                         <div class="about__stat-item">
 
-                            <span class="about__stat-label" data-i18n="about.stat1.title">Şık &amp; Samimi Konsept</span>
+                            <span class="about__stat-label" data-i18n="about.stat1.title">Şık &amp; Samimi
+                                Konsept</span>
                         </div>
                         <div class="about__stat-item">
                             <span class="about__stat-label" data-i18n="about.stat2.title">Lezzet Yolculuğu</span>
@@ -202,14 +209,20 @@
 
                 <!-- ======== Filtre / Sekme Butonları ======== -->
                 <nav class="menu__tabs" aria-label="Menü kategorileri" data-i18n-aria-label="menu.tabs.aria">
-                    <button class="menu__tab menu__tab--active" data-category="all" aria-pressed="true" data-i18n="menu.tab.all">Tümü</button>
-                    <button class="menu__tab" data-category="hot" aria-pressed="false" data-i18n="menu.tab.hot">Sıcak İçecekler</button>
-                    <button class="menu__tab" data-category="cold" aria-pressed="false" data-i18n="menu.tab.cold">Soğuk İçecekler &amp;
+                    <button class="menu__tab menu__tab--active" data-category="all" aria-pressed="true"
+                        data-i18n="menu.tab.all">Tümü</button>
+                    <button class="menu__tab" data-category="hot" aria-pressed="false" data-i18n="menu.tab.hot">Sıcak
+                        İçecekler</button>
+                    <button class="menu__tab" data-category="cold" aria-pressed="false" data-i18n="menu.tab.cold">Soğuk
+                        İçecekler &amp;
                         Milkshake</button>
-                    <button class="menu__tab" data-category="dessert" aria-pressed="false" data-i18n="menu.tab.dessert">Tatlılar</button>
-                    <button class="menu__tab" data-category="breakfast" aria-pressed="false" data-i18n="menu.tab.breakfast">Kahvaltı &amp;
+                    <button class="menu__tab" data-category="dessert" aria-pressed="false"
+                        data-i18n="menu.tab.dessert">Tatlılar</button>
+                    <button class="menu__tab" data-category="breakfast" aria-pressed="false"
+                        data-i18n="menu.tab.breakfast">Kahvaltı &amp;
                         Atıştırmalık</button>
-                    <button class="menu__tab" data-category="food" aria-pressed="false" data-i18n="menu.tab.food">Yemekler &amp;
+                    <button class="menu__tab" data-category="food" aria-pressed="false"
+                        data-i18n="menu.tab.food">Yemekler &amp;
                         Salatalar</button>
                 </nav>
 
@@ -906,8 +919,7 @@
                         <figcaption class="gallery__caption" data-i18n="gallery.caption.1">Botanik Köşemiz</figcaption>
                     </figure>
                     <figure class="gallery__item">
-                        <img src="images/kahvaltitabağı.webp" alt="Serpme kahvaltı ve kahve sunumu"
-                            loading="lazy" />
+                        <img src="images/kahvaltitabağı.webp" alt="Serpme kahvaltı ve kahve sunumu" loading="lazy" />
                         <figcaption class="gallery__caption" data-i18n="gallery.caption.2">Serpme Kahvaltı</figcaption>
                     </figure>
                     <figure class="gallery__item">
@@ -915,13 +927,11 @@
                         <figcaption class="gallery__caption" data-i18n="gallery.caption.3">Latte Art</figcaption>
                     </figure>
                     <figure class="gallery__item">
-                        <img src="images/redvelvet.webp" alt="Red velvet pasta dilimlenmiş hali"
-                            loading="lazy" />
+                        <img src="images/redvelvet.webp" alt="Red velvet pasta dilimlenmiş hali" loading="lazy" />
                         <figcaption class="gallery__caption" data-i18n="gallery.caption.4">Red Velvet</figcaption>
                     </figure>
                     <figure class="gallery__item">
-                        <img src="images/mekan-içi.webp" alt="Miracle Coffee neon tabela ve giriş"
-                            loading="lazy" />
+                        <img src="images/mekan-içi.webp" alt="Miracle Coffee neon tabela ve giriş" loading="lazy" />
                         <figcaption class="gallery__caption" data-i18n="gallery.caption.5">Neon Işıklar</figcaption>
                     </figure>
                     <figure class="gallery__item">
@@ -955,7 +965,7 @@
                     <!-- Kart 1: Doğum Günü & Kutlamalar -->
                     <article class="org__card">
                         <div class="org__card-image">
-                            <img src="https://picsum.photos/seed/miracle-party/600/400"
+                            <img src="images/doğumgunu.webp"
                                 alt="Miracle Coffee doğum günü kutlaması için özel hazırlanmış masa dekorasyonu"
                                 loading="lazy" />
                         </div>
@@ -975,7 +985,7 @@
                     <!-- Kart 2: Kurumsal Toplantılar -->
                     <article class="org__card">
                         <div class="org__card-image">
-                            <img src="https://picsum.photos/seed/miracle-meeting/600/400"
+                            <img src="images/yemekliorganizasyon.webp"
                                 alt="Miracle Coffee kurumsal toplantı alanı, ahşap masalar ve yeşil bitkiler"
                                 loading="lazy" />
                         </div>
@@ -995,7 +1005,7 @@
                     <!-- Kart 3: Özel Davetler & Atölyeler -->
                     <article class="org__card">
                         <div class="org__card-image">
-                            <img src="https://picsum.photos/seed/miracle-workshop/600/400"
+                            <img src="images/etkinlikorganizasyon1.webp"
                                 alt="Miracle Coffee atölye etkinliği, grup halinde kahve yapım atölyesi"
                                 loading="lazy" />
                         </div>
@@ -1104,17 +1114,20 @@
 
                         <!-- Ad Soyad -->
                         <div class="contact__field">
-                            <label for="form-name" class="contact__label" data-i18n="contact.form.name">Adınız Soyadınız</label>
+                            <label for="form-name" class="contact__label" data-i18n="contact.form.name">Adınız
+                                Soyadınız</label>
                             <input type="text" id="form-name" name="name" class="contact__input"
-                                placeholder="Örn: Ali Yılmaz" required aria-required="true" data-i18n-placeholder="contact.form.name" />
+                                placeholder="Örn: Ali Yılmaz" required aria-required="true"
+                                data-i18n-placeholder="contact.form.name" />
                         </div>
 
                         <!-- E-posta (zorunlu) -->
                         <div class="contact__field">
-                            <label for="form-email" class="contact__label" data-i18n="contact.form.email">E-posta Adresiniz <span
-                                    aria-hidden="true">*</span></label>
+                            <label for="form-email" class="contact__label" data-i18n="contact.form.email">E-posta
+                                Adresiniz <span aria-hidden="true">*</span></label>
                             <input type="email" id="form-email" name="email" class="contact__input"
-                                placeholder="ornek@email.com" required aria-required="true" data-i18n-placeholder="contact.form.email" />
+                                placeholder="ornek@email.com" required aria-required="true"
+                                data-i18n-placeholder="contact.form.email" />
                         </div>
 
                         <!-- ========== KONU SEÇİMİ (AÇILIR MENÜ) ========== -->
@@ -1124,14 +1137,20 @@
                              görünür hale gelir; diğer seçeneklerde gizli kalır.
                         -->
                         <div class="contact__field">
-                            <label for="form-subject" class="contact__label" data-i18n="contact.form.subject">Konu Seçiniz</label>
+                            <label for="form-subject" class="contact__label" data-i18n="contact.form.subject">Konu
+                                Seçiniz</label>
                             <select id="form-subject" name="subject" class="contact__input contact__input--select"
                                 required aria-required="true">
-                                <option value="" disabled selected data-i18n-value="contact.form.select.placeholder">— Seçiniz —</option>
-                                <option value="Genel İletişim" data-i18n-value="contact.form.subject.other">Genel İletişim</option>
-                                <option value="Öneri &amp; Şikayet" data-i18n-value="contact.form.subject.suggestion">Öneri &amp; Şikayet</option>
-                                <option value="Organizasyon Bilgisi Alma" data-i18n-value="contact.form.subject.org">Organizasyon Bilgisi Alma</option>
-                                <option value="Rezervasyon" data-i18n-value="contact.form.subject.rez">Rezervasyon</option>
+                                <option value="" disabled selected data-i18n-value="contact.form.select.placeholder">—
+                                    Seçiniz —</option>
+                                <option value="Genel İletişim" data-i18n-value="contact.form.subject.other">Genel
+                                    İletişim</option>
+                                <option value="Öneri &amp; Şikayet" data-i18n-value="contact.form.subject.suggestion">
+                                    Öneri &amp; Şikayet</option>
+                                <option value="Organizasyon Bilgisi Alma" data-i18n-value="contact.form.subject.org">
+                                    Organizasyon Bilgisi Alma</option>
+                                <option value="Rezervasyon" data-i18n-value="contact.form.subject.rez">Rezervasyon
+                                </option>
                             </select>
                         </div>
 
@@ -1147,31 +1166,36 @@
 
                             <!-- Tarih seçimi -->
                             <div class="contact__field">
-                                <label for="form-date" class="contact__label" data-i18n="contact.form.reservation.date">Rezervasyon Tarihi</label>
+                                <label for="form-date" class="contact__label"
+                                    data-i18n="contact.form.reservation.date">Rezervasyon Tarihi</label>
                                 <input type="date" id="form-date" name="rezervasyon-tarih" class="contact__input" />
                             </div>
 
                             <!-- Saat seçimi -->
                             <div class="contact__field">
-                                <label for="form-time" class="contact__label" data-i18n="contact.form.reservation.time">Rezervasyon Saati</label>
+                                <label for="form-time" class="contact__label"
+                                    data-i18n="contact.form.reservation.time">Rezervasyon Saati</label>
                                 <input type="time" id="form-time" name="rezervasyon-saat" class="contact__input" />
                             </div>
 
                             <!-- Kişi sayısı -->
                             <div class="contact__field">
-                                <label for="form-guests" class="contact__label" data-i18n="contact.form.reservation.guests">Kişi Sayısı</label>
+                                <label for="form-guests" class="contact__label"
+                                    data-i18n="contact.form.reservation.guests">Kişi Sayısı</label>
                                 <input type="number" id="form-guests" name="rezervasyon-kisi" class="contact__input"
-                                    min="1" max="50" placeholder="Örn: 4" data-i18n-placeholder="contact.form.reservation.guests.placeholder" />
+                                    min="1" max="50" placeholder="Örn: 4"
+                                    data-i18n-placeholder="contact.form.reservation.guests.placeholder" />
                             </div>
 
                         </div>
 
                         <!-- Mesaj alanı (textarea) -->
                         <div class="contact__field">
-                            <label for="form-message" class="contact__label" data-i18n="contact.form.message">Mesajınız</label>
+                            <label for="form-message" class="contact__label"
+                                data-i18n="contact.form.message">Mesajınız</label>
                             <textarea id="form-message" name="message" class="contact__input contact__textarea" rows="5"
-                                placeholder="Düşüncelerinizi içtenlikle yazın..." required
-                                aria-required="true" data-i18n-placeholder="contact.form.message"></textarea>
+                                placeholder="Düşüncelerinizi içtenlikle yazın..." required aria-required="true"
+                                data-i18n-placeholder="contact.form.message"></textarea>
                         </div>
 
                         <!-- Gönder butonu -->
