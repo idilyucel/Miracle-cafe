@@ -31,17 +31,21 @@
         content="Serpme kahvaltı, özel kahveler ve eşsiz tatlılar ile dolu botanik bir kafe deneyimi." />
     <meta property="og:type" content="website" />
 
-    <!-- Google Fonts: Poppins (Modern, okunaklı, sans-serif) -->
+    <!-- Google Fonts: Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
         rel="stylesheet" />
 
     <!-- Ana Stil Dosyamız -->
     <link rel="stylesheet" href="style.css" />
 
-    <!-- Font Awesome 6 (ikonlar için) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <!-- Font Awesome 6 (non-blocking) -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" /></noscript>
+
+    <!-- Hero görselini önceden yükle -->
+    <link rel="preload" href="images/mekandışı1.webp" as="image" />
 </head>
 
 <body>
@@ -56,7 +60,7 @@
         <nav class="nav container" aria-label="Ana navigasyon" data-i18n-aria-label="nav.aria">
             <!-- Logo: Sol üst köşe -->
             <a href="#" class="nav__logo" aria-label="Ana sayfaya git" data-i18n-aria-label="nav.logo.aria">
-                <img src="images/logo.webp" alt="Miracle Coffee &amp; Shop logosu" class="nav__logo-image"
+                <img src="images/logo.webp" width="789" height="787" alt="Miracle Coffee &amp; Shop logosu" class="nav__logo-image"
                     data-i18n-alt="nav.logo.alt" />
                 Miracle Coffee & Shop
             </a>
@@ -140,7 +144,7 @@
             <div class="about__container container">
                 <!-- Görsel alanı -->
                 <div class="about__image-wrapper">
-                    <img src="images/mekan-ici2.webp"
+                    <img src="images/mekan-ici2.webp" width="1200" height="1600"
                         alt="Miracle Coffee & Shop botanik duvarlı, ahşap mobilyalı rahat oturma alanı"
                         class="about__image" loading="lazy" />
                     <!-- Dekoratif çerçeve efekti -->
@@ -811,28 +815,28 @@
                 <div class="gallery__grid">
                     <!-- Her bir galeri öğesi -->
                     <figure class="gallery__item">
-                        <img src="images/mekan-içi1.webp" alt="Çökertme Kebabı sunumu"
+                        <img src="images/mekan-içi1.webp" width="1200" height="1600" alt="Çökertme Kebabı sunumu"
                             loading="lazy" />
                         <figcaption class="gallery__caption" data-i18n="gallery.caption.1">Çökertme Kebabı</figcaption>
                     </figure>
                     <figure class="gallery__item">
-                        <img src="images/kahvaltitabağı.webp" alt="Serpme kahvaltı ve kahve sunumu" loading="lazy" />
+                        <img src="images/kahvaltitabağı.webp" width="1200" height="943" alt="Serpme kahvaltı ve kahve sunumu" loading="lazy" />
                         <figcaption class="gallery__caption" data-i18n="gallery.caption.2">Serpme Kahvaltı</figcaption>
                     </figure>
                     <figure class="gallery__item">
-                        <img src="images/kahveart.webp" alt="Latte art kahve üzerinde kalp deseni" loading="lazy" />
+                        <img src="images/kahveart.webp" width="1200" height="1600" alt="Latte art kahve üzerinde kalp deseni" loading="lazy" />
                         <figcaption class="gallery__caption" data-i18n="gallery.caption.3">Latte Art</figcaption>
                     </figure>
                     <figure class="gallery__item">
-                        <img src="images/redvelvet.webp" alt="Red velvet pasta dilimlenmiş hali" loading="lazy" />
+                        <img src="images/redvelvet.webp" width="1200" height="1600" alt="Red velvet pasta dilimlenmiş hali" loading="lazy" />
                         <figcaption class="gallery__caption" data-i18n="gallery.caption.4">Red Velvet</figcaption>
                     </figure>
                     <figure class="gallery__item">
-                        <img src="images/tarcınlılezzet.webp" alt="Tarçınlı Lezzet" loading="lazy" />
+                        <img src="images/tarcınlılezzet.webp" width="1200" height="1600" alt="Tarçınlı Lezzet" loading="lazy" />
                         <figcaption class="gallery__caption" data-i18n="gallery.caption.5">Tarçınlı Lezzet</figcaption>
                     </figure>
                     <figure class="gallery__item">
-                        <img src="images/sogukicecekler.webp" alt="Soğuk içecekler ve renkli kokteyl bardakları"
+                        <img src="images/sogukicecekler.webp" width="1200" height="1600" alt="Soğuk içecekler ve renkli kokteyl bardakları"
                             loading="lazy" />
                         <figcaption class="gallery__caption" data-i18n="gallery.caption.6">Soğuk Lezzetler</figcaption>
                     </figure>
@@ -862,7 +866,7 @@
                     <!-- Kart 1: Doğum Günü & Kutlamalar -->
                     <article class="org__card">
                         <div class="org__card-image">
-                            <img src="images/doğumgunu.webp"
+                            <img src="images/doğumgunu.webp" width="1200" height="1600"
                                 alt="Miracle Coffee doğum günü kutlaması için özel hazırlanmış masa dekorasyonu"
                                 loading="lazy" />
                         </div>
@@ -882,7 +886,7 @@
                     <!-- Kart 2: Kurumsal Toplantılar -->
                     <article class="org__card">
                         <div class="org__card-image">
-                            <img src="images/yemekliorganizasyon.webp"
+                            <img src="images/yemekliorganizasyon.webp" width="1200" height="1600"
                                 alt="Miracle Coffee kurumsal toplantı alanı, ahşap masalar ve yeşil bitkiler"
                                 loading="lazy" />
                         </div>
@@ -902,7 +906,7 @@
                     <!-- Kart 3: Özel Davetler & Atölyeler -->
                     <article class="org__card">
                         <div class="org__card-image">
-                            <img src="images/etkinlikorganizasyon1.webp"
+                            <img src="images/etkinlikorganizasyon1.webp" width="2688" height="3584"
                                 alt="Miracle Coffee atölye etkinliği, grup halinde kahve yapım atölyesi"
                                 loading="lazy" />
                         </div>
